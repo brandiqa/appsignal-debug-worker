@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "appsignal-debug-worker",
+  "version": "1.0.0",
+  "description": "A template for kick starting a Cloudflare Workers project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "preview": "wrangler preview",
+    "format": "prettier --write \"**/*.{js,css,json,md}\""
+  },
+  "author": "Michael Wanyoike <micwanyoike@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandiqa/appsignal-debug-worker"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "prettier": "^2.3.2"
+  }
+}

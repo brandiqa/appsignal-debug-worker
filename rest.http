@@ -1,0 +1,2 @@
+# Test GET request
+GET http://localhost:8787/ HTTP/1.1
