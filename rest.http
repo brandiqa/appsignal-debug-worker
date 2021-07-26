@@ -1,2 +1,29 @@
 # Test GET request
 GET http://localhost:8787/ HTTP/1.1
+
+###
+
+# Test POST request - invalid
+POST http://localhost:8787/ HTTP/1.1
+
+### 
+
+# Test POST request - invalid dob
+POST http://localhost:8787/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "John"
+}
+
+
+### 
+
+# Test POST request - valid
+POST http://localhost:8787/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "John",
+  "dob": "1990-03-15"
+}
