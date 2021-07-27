@@ -6,7 +6,7 @@ A Cloudflare Workers project demonstrating how to use [AppSignal](https://www.ap
 
 You'll need the following to run this code:
 
-1. API key acquired from [AppSignal](https://www.appsignal.com/)
+1. Sign up for a 30 day trial account at [AppSignal](https://www.appsignal.com/) and acquire an API key
 2. [Cloudflare](https://www.cloudflare.com/) account
 3. [Wrangler](https://developers.cloudflare.com/workers/get-started/guide) CLI and authenticated with your Cloudflare account
 4. Visual Studio Code editor with [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension installed
@@ -15,13 +15,14 @@ You'll need the following to run this code:
 
 Clone the repository to your workspace then execute the following:
 
-```bash
+````bash
 # 1. Navigate to project folder/Open in VS Code then access terminal
 cd appsignal-debug-worker/
 
 # 2. Update wrangler.toml to reflect your account id(cloudflare)
 
-# 3. Configure your AppSignal API Key
+# 3. Upload your AppSignal API Key
+wrangler secret put APPSIGNAL_API
 
 # 4. Install package dependencies
 npm install
@@ -41,3 +42,5 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+````

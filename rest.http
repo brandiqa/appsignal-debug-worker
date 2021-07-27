@@ -3,23 +3,12 @@ GET http://localhost:8787/ HTTP/1.1
 
 ###
 
-# Test POST request - invalid
+# Test POST - invalid json request
 POST http://localhost:8787/ HTTP/1.1
 
 ### 
 
-# Test POST request - invalid dob
-POST http://localhost:8787/ HTTP/1.1
-Content-Type: application/json
-
-{
-  "name": "John"
-}
-
-
-### 
-
-# Test POST request - valid
+# Test POST - valid
 POST http://localhost:8787/ HTTP/1.1
 Content-Type: application/json
 
