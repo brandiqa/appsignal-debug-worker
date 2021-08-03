@@ -4,8 +4,6 @@ usage_model = "bundled"
 
 account_id = "4504f7728d644293d728b7168b5cf13d"
 workers_dev = true
-route = ""
-zone_id = ""
 
 # [secrets]
 # APPSIGNAL_API

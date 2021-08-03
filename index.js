@@ -44,11 +44,18 @@ async function handlePostRequest(request) {
       headers: { 'content-type': 'application/json' },
     })
   } catch (error) {
-    return handleError(error)
+    return handleError(error, {
+      category: 'Backend',
+      action: 'handlePostRequest',
+      metadata: {
+        fileName: 'index.js',
+      },
+    })
   }
 }
 
-function handleError(error) {
+function handleError(error, breadcrumb) {
+  appsignal.addBreadcrumb(breadcrumb)
   appsignal.sendError(error)
   return new Response(error, {
     headers: { 'content-type': 'text/plain' },
