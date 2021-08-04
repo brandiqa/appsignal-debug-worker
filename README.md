@@ -19,7 +19,7 @@ Clone the repository to your workspace then execute the following:
 # 1. Navigate to project folder/Open in VS Code then access terminal
 cd appsignal-debug-worker/
 
-# 2. Update wrangler.toml to reflect your account id(cloudflare)
+# 2. Update wrangler.toml to reflect your account id(cloudflare workers)
 
 # 3. Upload your AppSignal API Key
 wrangler secret put APPSIGNAL_API
