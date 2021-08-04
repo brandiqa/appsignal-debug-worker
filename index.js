@@ -49,6 +49,8 @@ async function handlePostRequest(request) {
       action: 'handlePostRequest',
       metadata: {
         fileName: 'index.js',
+        message: error.message,
+        foo: 'bar',
       },
     })
   }
