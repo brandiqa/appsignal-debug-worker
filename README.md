@@ -7,9 +7,10 @@ A Cloudflare Workers project demonstrating how to use [AppSignal](https://www.ap
 You'll need the following to run this code:
 
 1. Sign up for a 30 day trial account at [AppSignal](https://www.appsignal.com/) and acquire an API key
-2. [Cloudflare](https://www.cloudflare.com/) account
-3. [Wrangler](https://developers.cloudflare.com/workers/get-started/guide) CLI and authenticated with your Cloudflare account
-4. Visual Studio Code editor with [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension installed
+2. Node version 14+ and npm version 7+
+3. [Cloudflare](https://www.cloudflare.com/) account
+4. [Wrangler](https://developers.cloudflare.com/workers/get-started/guide) CLI and authenticated with your Cloudflare account
+5. Visual Studio Code editor with [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension installed
 
 ## Setup
 
