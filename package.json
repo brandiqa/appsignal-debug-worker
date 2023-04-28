@@ -5,7 +5,8 @@
   "description": "Debugging Cloudflare Workers project with AppSignal",
   "main": "index.js",
   "scripts": {
-    "dev": "wrangler dev",
+    "deploy": "wrangler publish index.js",
+    "dev": "wrangler dev index.js --local",
     "preview": "wrangler preview",
     "format": "prettier --write \"**/*.{js,css,json,md}\""
   },
@@ -15,7 +16,9 @@
     "type": "git",
     "url": "https://github.com/brandiqa/appsignal-debug-worker"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "wrangler": "^2.17.0"
+  },
   "dependencies": {
     "@appsignal/javascript": "^1.3.26",
     "date-fns": "^2.29.3",

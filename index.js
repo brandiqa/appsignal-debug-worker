@@ -1,18 +1,21 @@
 import { parseISO, differenceInYears } from 'date-fns'
 import Appsignal from '@appsignal/javascript'
 
-const appsignal = new Appsignal({ key: APPSIGNAL_API })
+let appsignal
 
-addEventListener('fetch', (event) => {
-  event.respondWith(handleRequest(event.request))
-})
+export default {
+  async fetch(request, env, ctx) {
+    // instantiate AppSignal only when it hasn't been instantiated
+    if (!appsignal) {
+      appsignal = new Appsignal({ key: env.APPSIGNAL_API })
+    }
 
-async function handleRequest(request) {
-  if (request.method === 'POST') {
-    return handlePostRequest(request)
-  } else {
-    return handleGetRequest(request)
-  }
+    if (request.method === 'POST') {
+      return handlePostRequest(request)
+    } else {
+      return handleGetRequest(request)
+    }
+  },
 }
 
 /**
@@ -20,6 +23,7 @@ async function handleRequest(request) {
  * @param {Request} request
  */
 async function handleGetRequest(request) {
+  appsignal.demo()
   return new Response('Hello worker!', {
     headers: { 'content-type': 'text/plain' },
   })
