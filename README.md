@@ -7,9 +7,9 @@ A Cloudflare Workers project demonstrating how to use [AppSignal](https://www.ap
 You'll need the following to run this code:
 
 1. Sign up for a 30 day trial account at [AppSignal](https://www.appsignal.com/) and acquire an API key
-2. Node version 14+ and npm version 7+
+2. Node version 16.13.0 or higher
 3. [Cloudflare](https://www.cloudflare.com/) account
-4. [Wrangler](https://developers.cloudflare.com/workers/get-started/guide) CLI and authenticated with your Cloudflare account
+4. [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/) CLI installed and authenticated with your Cloudflare account
 5. Visual Studio Code editor with [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension installed
 
 ## Setup
@@ -20,18 +20,22 @@ Clone the repository to your workspace then execute the following:
 # 1. Navigate to project folder/Open in VS Code then access terminal
 cd appsignal-debug-worker/
 
-# 2. Update wrangler.toml to reflect your account id(cloudflare workers)
+# 2. Set the APPSIGNAL_API secret in `.dev.vars` file - this will be used in development
+APPSIGNAL_API="replace with your API key"
 
-# 3. Upload your AppSignal API Key
+# 3. For the deployed worder, upload your AppSignal API Key
 wrangler secret put APPSIGNAL_API
 
 # 4. Install package dependencies
 npm install
 
 # 5. Launch the dev server
-npm run dev
+npm start
 
-#. 6. Execute HTTP Commands located in rest.http file
+# 6. Execute HTTP Commands located in rest.http file
+
+# 7. To publish the app
+npm run deploy
 ```
 
 ## License

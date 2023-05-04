@@ -1,9 +1,3 @@
 name = "appsignal-debug-worker"
-type = "webpack"
-usage_model = "bundled"
-
-account_id = "4504f7728d644293d728b7168b5cf13d"
-workers_dev = true
-
-# [secrets]
-# APPSIGNAL_API
+main = "src/index.js"
+compatibility_date = "2023-04-27"

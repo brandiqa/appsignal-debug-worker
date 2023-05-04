@@ -19,11 +19,10 @@ export default {
 }
 
 /**
- * Respond with hello worker text
+ * Respond with 'Hello worker!' text
  * @param {Request} request
  */
 async function handleGetRequest(request) {
-  appsignal.demo()
   return new Response('Hello worker!', {
     headers: { 'content-type': 'text/plain' },
   })
